@@ -48,24 +48,24 @@ if dim=="Spawn":
                st.header(f"You need {int(eme / 64):,d} Stacks of T3 Emerald")
           else:
                st.header(f"You need {int(eme / 64):,d} Stacks and {eme % 64} T3 Emerald")
-elif dim=="Desert":
+elif dim=="Grotto":
      block = st.radio(
           "",
-          ('Sandstone-Copper Mix','Copper-Gold Mix','Gold-Desert Gem Mix','Desert Mix'))
+          ('Diorite-Coal Mix','Coal-Lapis Mix','Lapis-Redstone Gem Mix','Grotto Mix'))
      val = int(st.text_input('How Many Blocks?', 0))
-     if block == 'Sandstone-Copper Mix':
+     if block == 'Diorite-Coal Mix':
           a=val*2
           b = int(a / 64)
           c = a % 64
           if ((c % 64)==0):
-               st.header(f"You need {b:,d} Stacks of T3 Sandstone and Copper")
+               st.header(f"You need {b:,d} Stacks of T3 Diorite and Coal")
           else:
-               st.header(f"You need {b:,d} stacks and {c} blocks of T3 Sandstone and Copper ")
-     elif block == "Copper-Gold Mix":
+               st.header(f"You need {b:,d} stacks and {c} blocks of T3 Diorite and Coal ")
+     elif block == "Coal-Lapis Mix":
           pri = val * 6
           fd=val*5
           if ((pri % 64)==0):
-               st.header(f"You need {int(pri/64):,d} Stacks of T3 Copper")
+               st.header(f"You need {int(pri/64):,d} Stacks of T3 Coal")
           else:
                st.header(f"You need {int(pri/64):,d} stacks and {pri%64} blocks of T3 Copper")
           if ((fd % 64)==0):
