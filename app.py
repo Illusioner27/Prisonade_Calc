@@ -64,7 +64,7 @@ if dim=="Ranch":
           if ((coal % 64)==0):
                st.header(f"You need {int(coal/64):,d} Stacks of T3 Coal ({coal} blocks)")
           else:
-               st.header(f"You need {int(coal/64):,d} stacks and {coal%64} blocks of T3 Caol ({coal} blocks)")
+               st.header(f"You need {int(coal/64):,d} stacks and {coal%64} blocks of T3 Coal ({coal} blocks)")
      elif block == "Coal-Copper Mix":
           pri = val * 6
           fd=val*5
