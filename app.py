@@ -85,9 +85,9 @@ if dim=="Ranch":
           else:
                st.header(f"You need {b:,d} stacks and {c} blocks of T3 Copper and Redstone ({a} blocks)")
      else:
-          ame = val * 24
-          fd = val * 60
-          pri = val * 40
+          ame = val * 30
+          fd = val * 75
+          pri = val * 50
           if ((ame % 64)==0):
                st.header(f"You need {int(ame/64):,d} Stacks of T3 Coal ({ame} blocks)")
           else:
