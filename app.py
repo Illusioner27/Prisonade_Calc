@@ -55,12 +55,16 @@ if dim=="Ranch":
           ('Granite-Coal Mix', 'Coal-Copper Mix', 'Copper-Redstone Mix','Ranch Mix'))
      val=int(st.text_input('How Many Blocks?', 0))
      if block=='Granite-Coal Mix':
-          a = val*4
-          b = a % 64
-          if ((b % 64)==0):
-               st.header(f"You need {a:,d} Stacks of  T3 Stone and Iron ({a} blocks)")
+          coal = val*3
+          granit = val*2
+          if ((granit % 64)==0):
+               st.header(f"You need {int(granit/64):,d} Stacks of T3 Granit ({granit} blocks)")
           else:
-               st.header(f"You need {a:,d} stacks and {b} blocks of T3 Stone and Iron ({a} blocks)")
+               st.header(f"You need {int(granit/64):,d} stacks and {granit%64} blocks of T3 Granit ({granit} blocks)")
+          if ((coal % 64)==0):
+               st.header(f"You need {int(coal/64):,d} Stacks of T3 Coal ({coal} blocks)")
+          else:
+               st.header(f"You need {int(coal/64):,d} stacks and {coal%64} blocks of T3 Caol ({coal} blocks)")
      elif block == "Coal-Copper Mix":
           pri = val * 6
           fd=val*5
@@ -102,7 +106,7 @@ elif dim=="Port":
           ('Sandstone-Prismarine Mix','Prismarine-Oceanstone Mix','Oceanstone-Seashine Mix','Port Mix'))
      val = int(st.text_input('How Many Blocks?', 0))
      if block == 'Sandstone-Prismarine Mix':
-          a=val*4
+          a=val*6
           b = int(a / 64)
           c = a % 64
           if ((c % 64)==0):
@@ -111,7 +115,7 @@ elif dim=="Port":
                st.header(f"You need {b:,d} stacks and {c} blocks of T3 Sandstone and Prismarine ({a} blocks)")
      elif block == "Prismarine-Oceanstone Mix":
           fg=val*8
-          hr=val*6
+          hr=val*7
           if ((fg % 64)==0):
                st.header(f"You need {int(fg/64):,d} Stacks of T3 Prismarine ({fg} blocks)")
           else:
@@ -121,7 +125,7 @@ elif dim=="Port":
           else:
                st.header(f"You need {int(hr / 64):,d} Stacks and {hr % 64} T3 Oceanstone ({hr} blocks)")
      elif block == "Oceanstone-Seashine Mix":
-          a = val * 12
+          a = val * 13
           b = int(a / 64)
           c = a % 64
           if ((c % 64)==0):
@@ -129,9 +133,9 @@ elif dim=="Port":
           else:
                st.header(f"You need {b:,d} stacks and {c} blocks of T3 Oceanstone and Seashine ({a} blocks)")
      else:
-          mg = val * 40
-          fg = val * 90
-          hr = val * 60
+          mg = val * 56
+          fg = val * 140
+          hr = val * 91
           if ((mg % 64)==0):
                st.header(f"You need {int(mg/64):,d} Stacks of T3 Prismarine ({mg} blocks)")
           else:
@@ -150,7 +154,7 @@ elif dim=="Empire":
           ('Moss Stone-Star Rock Mix','Star Rock-Aztez Relic Mix','Aztec Relic-Amethyst Mix','Empire Mix'))
      val = int(st.text_input('How Many Blocks?', 0))
      if block == 'Moss Stone-Star Rock Mix':
-          a=val*5
+          a=val*7
           b = int(a / 64)
           c = a % 64
           if ((c % 64)==0):
@@ -158,8 +162,8 @@ elif dim=="Empire":
           else:
                st.header(f"You need {b:,d} stacks and {c} blocks of T3 Moss Stone and Star Rock ({a} blocks)")
      elif block == "Star Rock-Aztez Relic Mix":
-          fg=val*8
-          hr=val*7
+          fg=val*10
+          hr=val*8
           if ((fg % 64)==0):
                st.header(f"You need {int(fg/64):,d} Stacks of T3 Star Rock ({fg} blocks)")
           else:
@@ -169,7 +173,7 @@ elif dim=="Empire":
           else:
                st.header(f"You need {int(hr / 64):,d} Stacks and {hr % 64} T3 Azteec Relic ({hr} blocks)")
      elif block == "Aztec Relic-Amethyst Mix":
-          a = val * 13
+          a = val * 14
           b = int(a / 64)
           c = a % 64
           if ((c % 64)==0):
@@ -177,9 +181,9 @@ elif dim=="Empire":
           else:
                st.header(f"You need {b:,d} stacks and {c} blocks of T3 Aztec Relic and Amethyst ({a} blocks)")
      else:
-          mg = val * 48
-          fg = val * 120
-          hr = val * 78
+          mg = val * 70
+          fg = val * 154
+          hr = val * 98
           if ((mg % 64)==0):
                st.header(f"You need {int(mg/64):,d} Stacks of T3 Star Rock ({mg} blocks)")
           else:
@@ -198,7 +202,7 @@ elif dim=="Citadel":
           ('Marble-Purpur Mix','Purpur-Magma Mix','Magma-Obsidian Mix','Citadel Mix'))
      val = int(st.text_input('How Many Blocks?', 0))
      if block == 'Marble-Purpur Mix':
-          a=val*6
+          a=val*9
           b = int(a / 64)
           c = a % 64
           if ((c % 64)==0):
@@ -206,19 +210,16 @@ elif dim=="Citadel":
           else:
                st.header(f"You need {b:,d} stacks and {c} blocks of T3 Marble and Purpur ({a} blocks)")
      elif block == "Purpur-Magma Mix":
-          fg=val*10
-          hr=val*8
-          if ((fg % 64)==0):
-               st.header(f"You need {int(fg/64):,d} Stacks of T3 Purpur ({fg} blocks)")
+          a=val*11
+          b = int(a / 64)
+          c = a % 64
+          if ((c % 64)==0):
+               st.header(f"You need {b:,d} Stacks of T3 Puprur and Magma ({a} blocks)")
           else:
-               st.header(f"You need {int(fg / 64):,d} Stacks and {fg % 64} T3 Purpur ({fg} blocks)")
-          if ((hr % 64)==0):
-               st.header(f"You need {int(hr/64):,d} Stacks of T3 Magma ({hr} blocks)")
-          else:
-               st.header(f"You need {int(hr / 64):,d} Stacks and {hr % 64} T3 Magma ({hr} blocks)")
+               st.header(f"You need {b:,d} stacks and {c} blocks of T3 Purpur and Magma ({a} blocks)")
      elif block == "Magma-Obsidian Mix":
-          fg=val*15
-          hr=val*8
+          fg=val*16
+          hr=val*12
           if ((fg % 64)==0):
                st.header(f"You need {int(fg/64):,d} Stacks of T3 Magma ({fg} blocks)")
           else:
@@ -226,11 +227,11 @@ elif dim=="Citadel":
           if ((hr % 64)==0):
                st.header(f"You need {int(hr/64):,d} Stacks of T3 Obsidian ({hr} blocks)")
           else:
-               st.header(f"You need {int(hr / 64):,d} Stacks and {hr % 64} T3 Obsidian ({hr} blocks)")
+               st.header(f"You need {int(hr / 64):,d} Stacks and {hr % 64} T3 Obsidian ({hr} blocks)")          
      else:
-          mg = val * 80
-          fg = val * 184
-          hr = val * 64
+          mg = val * 110
+          fg = val * 270
+          hr = val * 120
           if ((mg % 64)==0):
                st.header(f"You need {int(mg/64):,d} Stacks of Purpur ({mg} blocks)")
           else:
